@@ -6,9 +6,7 @@ I build tools for understanding how LLM agent systems fail.
 
 **[PISAMA](https://github.com/tn-pisama/pisama)** — Multi-agent failure detection platform. 17 detectors that catch loops, hallucinations, context loss, coordination breakdowns, prompt injection, and more in LLM orchestration systems. Built on the [MAST taxonomy](https://arxiv.org/abs/2503.13657) (NeurIPS 2025).
 
-**[pisama-claude-code](https://github.com/tn-pisama/pisama-claude-code)** — Trace capture for Claude Code sessions. Token usage, cost tracking, and failure detection in one `pip install`. [![PyPI](https://img.shields.io/pypi/v/pisama-claude-code)](https://pypi.org/project/pisama-claude-code/)
-
-**[narrec](https://github.com/tn-pisama/narrec)** — Narrated recordings as code. Automated web app demos with voiceover using Playwright.
+**pisama-claude-code** — Trace capture for Claude Code sessions with token usage and cost tracking. [![PyPI](https://img.shields.io/pypi/v/pisama-claude-code)](https://pypi.org/project/pisama-claude-code/)
 
 ## Background
 
