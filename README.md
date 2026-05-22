@@ -1,10 +1,12 @@
+> All Pisama repositories are now at [github.com/Pisama-AI](https://github.com/Pisama-AI). Old `tn-pisama/*` URLs redirect.
+
 # Hi, I'm Tuomo
 
 I build [Pisama](https://pisama.ai) — process-level failure detection for LLM agent systems.
 
 ## What I'm working on
 
-**[Pisama](https://github.com/tn-pisama/pisama)** — the layer between observability and rubric-based artifact evaluation for AI agents. 50 calibrated detectors catching loops, hallucinations, prompt injection, persona drift, state corruption, coordination breakdown, convergence failures, and more — running locally for $0, with optional LLM-judge escalation when needed. Native adapters for LangGraph, CrewAI, AutoGen, Claude Code, n8n, Dify, OpenClaw, and Claude Managed Agents.
+**[Pisama](https://github.com/Pisama-AI/pisama)** — the layer between observability and rubric-based artifact evaluation for AI agents. 50 calibrated detectors catching loops, hallucinations, prompt injection, persona drift, state corruption, coordination breakdown, convergence failures, and more — running locally for $0, with optional LLM-judge escalation when needed. Native adapters for LangGraph, CrewAI, AutoGen, Claude Code, n8n, Dify, OpenClaw, and Claude Managed Agents.
 
 On the [TRAIL benchmark](https://arxiv.org/abs/2505.08638) (148 multi-agent traces, 841 annotated errors): **59.9% joint accuracy at 100% precision** — vs 1.1–11.9% for frontier LLMs (GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro) on the same traces. Built on the [MAST taxonomy](https://arxiv.org/abs/2503.13657) (NeurIPS 2025).
 
