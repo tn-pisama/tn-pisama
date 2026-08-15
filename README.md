@@ -6,9 +6,9 @@ I build [Pisama](https://pisama.ai) — process-level failure detection for LLM 
 
 ## What I'm working on
 
-**[Pisama](https://github.com/Pisama-AI/pisama)** — the layer between observability and rubric-based artifact evaluation for AI agents. 50 calibrated detectors catching loops, hallucinations, prompt injection, persona drift, state corruption, coordination breakdown, convergence failures, and more — running locally for $0, with optional LLM-judge escalation when needed. Native adapters for LangGraph, CrewAI, AutoGen, Claude Code, n8n, Dify, OpenClaw, and Claude Managed Agents.
+**[Pisama](https://pisama.ai)** — the layer between observability and rubric-based artifact evaluation for AI agents. Calibrated detectors catching loops, hallucinations, prompt injection, persona drift, state corruption, coordination breakdown, convergence failures, and more — running locally for $0, with optional LLM-judge escalation when needed. Native adapters for LangGraph, OpenAI Agents SDK, Claude Agent SDK, n8n, and Dify.
 
-On the [TRAIL benchmark](https://arxiv.org/abs/2505.08638) (148 multi-agent traces, 841 annotated errors): **59.9% joint accuracy at 100% precision** — vs 1.1–11.9% for frontier LLMs (GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro) on the same traces. Built on the [MAST taxonomy](https://arxiv.org/abs/2503.13657) (NeurIPS 2025).
+Built on the [MAST taxonomy](https://arxiv.org/abs/2503.13657) (NeurIPS 2025).
 
 [![pisama](https://img.shields.io/pypi/v/pisama?label=pisama&style=flat-square&color=blue)](https://pypi.org/project/pisama/)
 [![pisama-detectors](https://img.shields.io/pypi/v/pisama-detectors?label=pisama-detectors&style=flat-square&color=blue)](https://pypi.org/project/pisama-detectors/)
