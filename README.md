@@ -1,24 +1,25 @@
-# Hi, I’m Tuomo. I build Pisama.
+# Tuomo — building Pisama
 
-I build systems that find where AI agent workflows fail, turn execution evidence into proposed repairs, and check whether those repairs hold.
+I build [Pisama](https://pisama.ai), tooling for diagnosing failures in AI agent workflows and checking proposed repairs. My work spans Python and TypeScript SDKs, trace analysis, evaluation infrastructure, and n8n workflow repairs.
 
-At [Pisama](https://pisama.ai), my focus is adaptive failure detection, deterministic workflow guards, and verification that keeps unknown or unchecked outcomes explicit.
+The engineering question I focus on: **what evidence is sufficient to call an agent run checked, failed, or repaired?**
 
-[Website](https://pisama.ai) · [Documentation](https://docs.pisama.ai) · [Code](https://github.com/Pisama-AI)
+[Website](https://pisama.ai) · [Documentation](https://docs.pisama.ai) · [Pisama repositories](https://github.com/Pisama-AI)
 
-## A concrete engineering example
+## Selected engineering work
 
-**A guard can exist and still be bypassed.** In Pisama for n8n, adding a direct source-to-consumer connection can defeat an otherwise intact input guard. Pisama checks the wiring and reports that bypass.
+Three concrete examples, with implementation and regression tests:
 
-[Read the case study: failure evidence → repair → drift detection](https://github.com/tn-pisama/tn-pisama/blob/main/CASE_STUDY.md). Includes commit-pinned source, a reproducible command, and 38 passing local regression tests. This is engineering verification, not a production benchmark.
+**Preventing silent loss of failure evidence.** A JSONL loader could accept a trace envelope and ignore later rows. The fix rejects mixed envelopes instead of dropping evidence, and rejects empty or unsupported inputs before analysis. [Merged change #26](https://github.com/Pisama-AI/pisama-python/pull/26).
 
-## Selected Pisama work
+**Separating reported checks from verified coverage.** An initial API confused detector reporting with complete trace coverage. The correction gives reporting completeness its own meaning, validates span positions and counts, and preserves findings when coverage metadata contradicts them. [Initial change #28](https://github.com/Pisama-AI/pisama-python/pull/28) · [Correction #30](https://github.com/Pisama-AI/pisama-python/pull/30).
 
-- [Python CLI, SDK, and MCP server](https://github.com/Pisama-AI/pisama-python) — explicit detector assessments distinguish findings, abstentions, errors, and unknown coverage. [Inspect the tests](https://github.com/Pisama-AI/pisama-python/blob/ada910a7ad59225fc3b02519f4b2b87e53722a9e/tests/test_assessment_coverage.py).
-- [TypeScript tooling](https://github.com/Pisama-AI/pisama-js) — SDK middleware, local detectors, and CLI integration.
-- [Pisama for n8n](https://github.com/Pisama-AI/pisama-n8n) — execution-based diagnosis and deterministic workflow repairs.
-- [Verifier Gym](https://github.com/Pisama-AI/pisama-verifier-gym) — verifier audits, agreement metrics, and release gates; used internally, with limited external maintenance.
+**Detecting repairs that have been bypassed.** An n8n input guard can remain present while a new connection routes around it. Pisama checks the workflow wiring as well as the guard's existence. [Walkthrough, source, and reproduction steps](https://github.com/tn-pisama/tn-pisama/blob/main/CASE_STUDY.md).
 
-## Evaluation
+## Explore the code
+
+[Python SDK / CLI / MCP](https://github.com/Pisama-AI/pisama-python) · [TypeScript SDK / detectors / CLI](https://github.com/Pisama-AI/pisama-js) · [n8n detection and repairs](https://github.com/Pisama-AI/pisama-n8n) · [Verifier audits](https://github.com/Pisama-AI/pisama-verifier-gym)
+
+## Evaluation status
 
 I withdrew an earlier TRAIL benchmark after finding a scoring flaw. Detector evaluation remains in-sample; independent performance claims await held-out evaluation. [Full correction and evaluation status](https://github.com/tn-pisama/tn-pisama/blob/main/EVALUATION.md).
