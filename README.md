@@ -1,14 +1,26 @@
-# Tuomo — building Pisama
+![Pisama: Before you switch AI models, know what changes.](assets/pisama-migration-header.png)
 
-I build [Pisama](https://pisama.ai), tooling for diagnosing failures in AI agent workflows and checking proposed repairs. My work spans Python and TypeScript SDKs, trace analysis, evaluation infrastructure, and n8n workflow repairs.
+# Tuomo Nikulainen
 
-The engineering question I focus on: **what evidence is sufficient to call an agent run checked, failed, or repaired?**
+I'm building [Pisama](https://pisama.ai) around a practical question: **does a replacement AI model still meet the requirements of your workflow?**
 
-[Website](https://pisama.ai) · [Documentation](https://docs.pisama.ai) · [Pisama repositories](https://github.com/Pisama-AI)
+My current focus is assisted model migration assessment for read-only, text-based workflows. The work starts with existing examples, logs and business requirements, then compares the current model with candidate replacements. I investigate which behaviors improve, which regress and where the evidence remains incomplete.
+
+The aim is a recommendation a team can inspect, with individual cases and tested configurations behind it. The team makes the rollout decision.
+
+[Website](https://pisama.ai) | [Pisama repositories](https://github.com/Pisama-AI) | [LinkedIn](https://www.linkedin.com/in/tuomonikulainen/)
+
+## What I'm building
+
+- Workflow reconstruction and repeatable model comparisons.
+- Acceptance criteria, regression analysis and output compatibility checks.
+- Python and TypeScript tooling for evaluation and evidence review.
+
+Previously, I led data organizations at Zynga and Underdog and AI & Data at Bellota Labs. I bring that background in experimentation and production systems to hands-on engineering.
 
 ## Selected engineering work
 
-Three concrete examples, with implementation and regression tests:
+The migration work builds on earlier work in failure detection and verification. These examples include implementation and regression tests:
 
 **Preventing silent loss of failure evidence.** A JSONL loader could accept a trace envelope and ignore later rows. The fix rejects mixed envelopes instead of dropping evidence, and rejects empty or unsupported inputs before analysis. [Merged change #26](https://github.com/Pisama-AI/pisama-python/pull/26).
 
@@ -18,7 +30,7 @@ Three concrete examples, with implementation and regression tests:
 
 ## Explore the code
 
-[Python SDK / CLI / MCP](https://github.com/Pisama-AI/pisama-python) · [TypeScript SDK / detectors / CLI](https://github.com/Pisama-AI/pisama-js) · [n8n detection and repairs](https://github.com/Pisama-AI/pisama-n8n) · [Verifier audits](https://github.com/Pisama-AI/pisama-verifier-gym)
+[Python SDK / CLI / MCP](https://github.com/Pisama-AI/pisama-python) | [Verifier audits](https://github.com/Pisama-AI/pisama-verifier-gym) | [TypeScript SDK / detectors / CLI](https://github.com/Pisama-AI/pisama-js) | [n8n detection and repairs](https://github.com/Pisama-AI/pisama-n8n) | [Documentation](https://docs.pisama.ai)
 
 ## Evaluation status
 
