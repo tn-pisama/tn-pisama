@@ -30,7 +30,9 @@ The migration work builds on earlier work in failure detection and verification.
 
 ## Explore the code
 
-[Python SDK / CLI / MCP](https://github.com/Pisama-AI/pisama-python) | [Verifier audits](https://github.com/Pisama-AI/pisama-verifier-gym) | [TypeScript SDK / detectors / CLI](https://github.com/Pisama-AI/pisama-js) | [n8n detection and repairs](https://github.com/Pisama-AI/pisama-n8n) | [Documentation](https://docs.pisama.ai)
+The pinned repositories are the failure detection and verification foundation that the migration assessments build on.
+
+[Python SDK / CLI / MCP](https://github.com/Pisama-AI/pisama-python) | [Verifier audits](https://github.com/Pisama-AI/pisama-verifier-gym) | [TypeScript SDK / detectors / CLI](https://github.com/Pisama-AI/pisama-js) | [n8n detection and repairs](https://github.com/Pisama-AI/pisama-n8n)
 
 ## Evaluation status
 
