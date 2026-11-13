@@ -8,6 +8,8 @@ My current focus is assisted model migration assessment for read-only, text-base
 
 The aim is a recommendation a team can inspect, with individual cases and tested configurations behind it. The team makes the rollout decision.
 
+**Worked example:** [Banking77 migration assessment](https://github.com/Pisama-AI/banking77-migration-assessment). Eleven candidates against o4-mini on 500 cases, with per-case verdicts and a one-command verifier that recomputes every published number.
+
 [Website](https://pisama.ai) | [Pisama repositories](https://github.com/Pisama-AI) | [LinkedIn](https://www.linkedin.com/in/tuomonikulainen/)
 
 ## What I'm building
